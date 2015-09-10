@@ -1,0 +1,13 @@
+entity tb_Hallsensor is
+end entity;
+
+architecture test_stuff of tb_Hallsensor is
+constant small_delay : time := 1 ns;
+-- The module
+component Hallsensor is
+    port (	clk	: in std_logic;
+				arst	: in std_logic;
+				hsen	: in std_logic;
+				rpm	: out unsigned(9 downto 0)
+         );
+end component Hallsensor;
